@@ -1,23 +1,26 @@
+{% extends 'core/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="{% static 'core/css/all.min.css' %}">
-    <link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}">
-</head>
-<body>
-    
-    <i class="fab fa-acquisitions-incorporated"></i>
 
 
+{% block content %}
+<div class=" mt-5">
+    <div class="text-center"> <img src=" {% static 'core/images/IMG20220214173135-01.jpeg' %}" alt="Propic" class="img-thumbnail
+         " width="250px" height="150px">
+    </div>
+    <div class="text-white  mt-5  mx-5 text-justify ">
+        <h1 class="font-weight-bold st-font "> Hello, </h1>
+        <div class="px-4 " style="line-height: 2rem;">
+            <p style="text-indent:100px; ">
+                I am <b class="text-warning"> Sumit Bhatkar </b> Python Backend Developer.
+            </p>
+        </div>
+    </div>
+    <div class="text-center">
 
-    <script src="{% static 'core/js/jquery.js'%}"></script>
-    <script src="{% static 'core/js/popper.js'%}"></script>
-    <script src="{% static 'core/js/all.min.js'%}"></script>
-    <script src="{% static 'core/js/bootstrap.js'%}"></script>   
-</body>
-</html>
+
+        <a href="{% url 'contact' %}" class="btn btn-outline-warning my-3 mr-5">Hire Me</a>
+        <a href="{% url 'contact' %}" class="btn btn-outline-info my-3">Contact</a>
+    </div>
+</div>
+
+{% endblock %}
